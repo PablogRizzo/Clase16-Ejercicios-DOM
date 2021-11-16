@@ -16,6 +16,8 @@ const a = document.querySelector('a');
 
 let cont = 0;
 
+console.log(p);
+
 p.forEach(element => {
     cont++;
     element.style.background = 'red';
@@ -25,12 +27,10 @@ console.log(cont);
 contenido.innerHTML = `Palabras totales: ${cont}`;
 
 a.addEventListener('click', e=>{
-
     e.preventDefault();
-    document.body.insertAdjacentElement("beforebegin",e.target.href)
+    p[1].innerHTML = a.href;
 });
 
 let imagen = document.createElement("img");
 imagen.src = '/mandarina.jpg';
-
 document.querySelector('.container').appendChild(imagen);
